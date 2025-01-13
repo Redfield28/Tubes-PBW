@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Membuat navbar lebih fleksibel */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0044cc;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Supaya elemen menu tetap rapi saat layar kecil */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    margin: 0 10px;
+}
+
+.navbar .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .user-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar .user-options button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar .user-options button:hover {
+    background-color: #0056b3;
+}
+
+.headline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.news-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 40px); /* Default untuk layar kecil */
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news-item img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.news-item h2 {
+    font-size: 18px;
+    color: #0044cc;
+}
+
+.latest-news {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.latest-news h2 {
+    font-size: 22px;
+    color: #0044cc;
+}
+
+
+@media (min-width: 600px) {
+    .news-item {
+        width: calc(50% - 40px); /* Setengah layar untuk perangkat lebih besar */
+    }
+}
+
+@media (min-width: 900px) {
+    .news-item {
+        width: calc(33.33% - 40px); /* Tiga kolom untuk layar besar */
+    }
+
+    .navbar .menu a {
+        font-size: 18px; /* Font lebih besar di layar besar */
+    }
+}
+
+@media (min-width: 1200px) {
+    .news-item {
+        width: calc(25% - 40px); /* Empat kolom untuk layar sangat besar */
+    }
+}

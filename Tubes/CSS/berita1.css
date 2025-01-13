@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Supaya elemen otomatis turun jika ruang tidak cukup */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0044cc;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li {
+    margin: 0 10px;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 28px;
+    color: #007b5e;
+    text-align: center;
+}
+
+.content .author, .content .date {
+    font-size: 14px;
+    color: #888;
+}
+
+.content .main-image {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.content .article-text p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+p {
+    text-align: justify;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #fcf5f5;
+    padding: 30px; /* Dikurangi padding untuk layar kecil */
+    box-shadow: 0 2px 10px rgba(1, 6, 24, 0.1);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+.form-group button:active {
+    background-color: #388e3c;
+}
+
+.comment-box {
+    margin-top: 30px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.comment {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.comment .author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment .action-buttons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.comment .action-buttons button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.comment .action-buttons button:hover {
+    background-color: #e64a19;
+}
+
+.h5, .h6 {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Navbar ditumpuk ke bawah */
+        align-items: flex-start;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar .menu li {
+        margin: 5px 0;
+    }
+
+    .content {
+        padding: 15px; /* Kurangi padding untuk layar kecil */
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .form-container {
+        padding: 20px; /* Kurangi padding form */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 20px; /* Kecilkan ukuran logo */
+    }
+
+    .navbar .menu a {
+        font-size: 14px; /* Sesuaikan font link menu */
+    }
+
+    .content h1 {
+        font-size: 20px; /* Ukuran heading lebih kecil */
+    }
+
+    .form-group button {
+        width: 100%; /* Tombol melebar untuk perangkat kecil */
+    }
+}
